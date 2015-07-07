@@ -85,7 +85,7 @@ VOLUME /data/db
 
 RUN mongod --fork --logpath /var/log/mongod.log
 
-RUN groupadd -r nodeuser && useradd -r -g nodeuser nodeuser
+RUN groupadd -r nodeuser && useradd -r -m -g nodeuser nodeuser
 
 # verify gpg and sha256: http://nodejs.org/dist/v0.10.31/SHASUMS256.txt.asc
 # gpg: aka "Timothy J Fontaine (Work) <tj.fontaine@joyent.com>"
